@@ -28,6 +28,7 @@ This is a multi-tenant school profile application built with Next.js 14+, Prisma
 - **React**  
 
 ## Project Structure
+```
 my-multi-tenant-app/
 ├── app/
 │   ├── [school]/
@@ -55,39 +56,42 @@ my-multi-tenant-app/
 ├── postcss.config.js              // PostCSS configuration
 ├── package.json                   // Project dependencies and scripts
 └── README.md                      // This file
-
+```
 
 ## Setup Instructions
 
 1. **Clone the Repository**
-
+```
    git clone https://github.com/yourusername/my-multi-tenant-app.git
    cd my-multi-tenant-app
-
+```
 2. **Install Dependencies**
-
+```
    npm install
-
+```
 3. **Run Prisma Migrations and Generate the Client**
-
+```
    npx prisma migrate dev --name init
    npx prisma generate
-
+```
 4. **(Optional) Seed the Database**
-
    "Use your seed script (if available) to add initial records for School and Profile."
+```
    node prisma/seed.js
-  
-5. **Run Prisma Studio**
+```
 
+6. **Run Prisma Studio**
+```
    npx prisma studio
+```
    "Use Studio to inspect and manage your database records."
 
-6. **Running the Application**
+7. **Running the Application**
    
    Start the development server:
+```
    npm run dev
-
+```
 ## Usage
 Public School Page
 Access the public profile by visiting a URL based on the subdomain, 
