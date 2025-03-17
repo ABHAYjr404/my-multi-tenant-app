@@ -11,6 +11,7 @@ export async function GET(req, { params }) {
     }
     return NextResponse.json(school);
   } catch (error) {
+    console.error("GET /api/schools error:", error);
     return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
   }
 }
@@ -24,6 +25,7 @@ export async function PUT(req, { params }) {
     });
     return NextResponse.json(updatedSchool);
   } catch (error) {
+    console.error("PUT /api/schools error:", error);
     return NextResponse.json({ error: "Failed to update school" }, { status: 500 });
   }
 }

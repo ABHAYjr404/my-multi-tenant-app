@@ -11,10 +11,9 @@ export const metadata = {
 
 export default async function RootLayout({ children }) {
   const session = await getServerSession(authOptions);
-
-  // Protect /admin route
+  // If the current page is /admin and there is no valid session, redirect to sign-in
   if (children?.props?.pathname === "/admin" && !session?.user) {
-    redirect("/api/auth/signin"); // Redirect to login
+    redirect("/api/auth/signin");
   }
 
   return (
