@@ -1,3 +1,37 @@
+/my-multi-tenant-app
+├── app
+│   ├── [school]
+│   │   └── page.jsx           // Public school profile page
+│   ├── admin
+│   │   └── page.jsx           // Protected admin page
+│   ├── api
+│   │   ├── auth
+│   │   │   └── [...nextauth]
+│   │   │         └── route.js // NextAuth API route
+│   │   ├── resolve-school
+│   │   │   └── route.js       // API route for subdomain resolution
+│   │   └── schools
+│   │       └── [id]
+│   │             └── route.js // API route for school data
+│   └── layout.js              // Global layout file
+├── lib
+│   └── db.js                 // Prisma client & helper functions
+├── prisma
+│   └── schema.prisma         // Prisma schema
+│   └── seed.js               // Input data with query
+├── public
+│   └── favicon.ico
+├── styles
+│   └── globals.css           // Global Tailwind CSS styles
+├── tailwind.config.js        // Tailwind config
+├── postcss.config.js         // PostCSS config
+├── next.config.js            // Next.js config
+├── package.json
+└── README.md
+
+
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

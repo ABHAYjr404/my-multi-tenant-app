@@ -1,0 +1,27 @@
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model School {
+  id          Int       @id @default(autoincrement())
+  subdomain   String    @unique
+  name        String
+  description String
+  contact     String
+  profiles    Profile[]
+}
+
+model Profile {
+  id       Int    @id @default(autoincrement())
+  userId   String @unique   // e.g. email
+  name     String
+  password String         // bcrypt-hashed password
+  role     String         // 'admin' only
+  school   School @relation(fields: [schoolId], references: [id])
+  schoolId Int
+}
