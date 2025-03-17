@@ -108,3 +108,12 @@ You can update the data and click “Update School Info” to send a PUT request
 
 Logout:
 The admin can also log out using the “Logout” button.
+
+## Screenshots
+
+![](public/Screenshot%20(60).png)
+![](public/Screenshot%20(61).png)
+![](public/Screenshot%20(62).png)
+![](public/Screenshot%20(63).png)
+![](public/Screenshot%20(64).png)
+![](public/Screenshot%20(67).png)
